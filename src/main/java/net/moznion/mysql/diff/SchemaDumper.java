@@ -203,12 +203,17 @@ public class SchemaDumper {
 
     String mysqlUser = mysqlConnectionInfo.getUser();
     if (!mysqlUser.isEmpty()) {
-      mysqldumpCommand.add(new StringBuilder().append("-u").append(mysqlUser).toString());
+      mysqldumpCommand.add("-u" + mysqlUser);
     }
 
     String mysqlHost = mysqlConnectionInfo.getHost();
     if (!mysqlHost.isEmpty()) {
-      mysqldumpCommand.add(new StringBuilder().append("-h").append(mysqlHost).toString());
+      mysqldumpCommand.add("-h" + mysqlHost);
+    }
+
+    String mysqlPassword = mysqlConnectionInfo.getPass();
+    if (!mysqlPassword.isEmpty()) {
+      mysqldumpCommand.add("-p" + mysqlPassword);
     }
 
     ProcessBuilder processBuilder = new ProcessBuilder(mysqldumpCommand);

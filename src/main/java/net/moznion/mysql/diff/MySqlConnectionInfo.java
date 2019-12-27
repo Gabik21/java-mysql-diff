@@ -42,9 +42,9 @@ public class MySqlConnectionInfo {
     @Setter
     private int port = 3306;
     @Setter
-    private String user = "root";
+    private String user = "devdb";
     @Setter
-    private String pass = "";
+    private String pass = "devdb";
 
     private List<String> properties = new ArrayList<>(Arrays.asList("allowMultiQueries=true"));
 

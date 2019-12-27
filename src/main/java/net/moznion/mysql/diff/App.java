@@ -20,7 +20,7 @@ import java.util.Optional;
 
 /**
  * Class for CLI application.
- * 
+ *
  * @author moznion
  *
  */
@@ -54,7 +54,7 @@ public class App {
 
   /**
    * Entry point of CLI application.
-   * 
+   *
    * <pre>
    * [Usage]
    *     java -jar [old_database] [new_database]
@@ -69,7 +69,7 @@ public class App {
    *     -h, --help:    Show usage
    *     -v, --version: Show version
    * </pre>
-   * 
+   *
    * @param args Options, or target of database arguments.
    * @throws IOException Throw if mysqldump command is failed.
    * @throws SQLException Throw if invalid SQL is given.
